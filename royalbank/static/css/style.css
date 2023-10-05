@@ -1,0 +1,19 @@
+li:hover{
+    background-color: black;
+    border-radius: 10px;
+}
+/* 
+#third{
+    background-color: red;
+   
+    height: 650px;
+    width: 100%;
+     
+    } */
+
+    #bg{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-attachment: fixed; */
+    }

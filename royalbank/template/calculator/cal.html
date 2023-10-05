@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+<head>
+<script src="{% static 'js/min.js' %}"></script>
+</head>
+<body>
+<div class="main">
+    <form name="f1">
+    <div class="pl">
+        loan amount:<input type="text" placeholder="enter the amount" name="lm"><br>
+        interest rate:<input type="text" placeholder="enter the interest rate"name='intra'><br>
+        loan tenure:<input type="text" placeholder="enter the year" name="loant"><br>
+        <input type="button" onclick="myFunction()"><br>
+        <input type="text" name="display" readonly >
+    </div>
+</form>
+</div>
+</body>
+{% endblock %}

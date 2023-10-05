@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block title %}Register{%endblock%}
+
+{%block content%}
+<head>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="newuser">
+    <div>
+        <form action="reg" method="POST">
+            {% csrf_token %}
+            First Name:<input type="text" placeholder="Enter your first name" name="fname">
+            Last Name:<input type="text" placeholder="Enter your last name" name="lname"><br>
+            DOB:<input type="date" placeholder="enter DOB" name="dateob"><br>
+            <lable>Gender</label><br>
+            <input id="male" type="radio" name="GEN" value="M"><label for="html">M</label><br>
+            <input id="fmale" type="radio" name="GEN" value="F"><label for="html">F</label><br>
+            Phone No:<input type="tel" name="phone" pattern="[6-9]{1}[0-9]{9}" placeholder="enter your phone number",maxlength="10">
+            Email:<input type="email" name="email" placeholder="email address"><br>
+            Location:<input type="text" placeholder="enter your Location" name="location"><br>
+            <lable>Account type</label><br>
+            <input id="sv" type="radio" name="actype" value="Savings">
+            <label for="html">Savings</label><br>
+            <input id="cr" type="radio" name="actype" value="Current">
+            <label for="html">Current</label><br>
+            <input type="submit" value="submit" >
+        </form>
+    </div>
+    </form>
+</div>
+</body>
+{%endblock%}

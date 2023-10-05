@@ -1,0 +1,121 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <link rel="stylesheet" href="{%static '/css/style.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <style>
+        body {
+          font-family: "Lato", sans-serif;
+        }
+        
+        .sidenav {
+          margin-top: 58px;
+          height: 100%;
+          width: 200px;
+          position:absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+        
+        .sidenav a {
+          padding: 6px 6px 6px 32px;
+          text-decoration: none;
+          font-size: 20px;
+          color: #818181;
+          display: block;
+        }
+        
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+        
+        .main {
+          margin-left: 200px; /* Same as the width of the sidenav */
+        }
+        
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-dark navbar-expand-md">
+        <div class="container">
+          <div class="col-2 text-left pl-md-0">
+            <h3 class="text-white">Royal Bank</h3>
+          </div>
+    
+          <div class="collapse navbar-collapse justify-content-center col-md-8 navbar-collapse-3">
+            <ul class="navbar-nav justify-content-center fw-bold">
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="{% url 'dashboard:backfirst' %}">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'dashboard:about' %}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'dashboard:calu' %}">Calculations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'dashboard:complaint' %}">Complaints</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'dashboard:contact' %}">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<div class="sidenav">
+  <div>
+     <p style="text-transform: capitalize;">HI {{client}}{{" "}}{{client.last_name}}</p>
+  </div>
+  <a href ="{% url 'dashboard:profile' %}">Profile</a>
+  <a href="{% url 'dashboard:accounts' %}">Accounts</a>
+  <a href="{% url 'dashboard:deppage' %}">Transaction</a>
+  <a href="{% url 'dashboard:statepg' %}">Statements</a>
+  <a href="#">Payments</a>
+  <a href="{% url 'dashboard:loans' %}">Loans</a>
+  <a href="{% url 'dashboard:res' %}">Password Reset </a>
+  <a href="{% url 'dashboard:lgout'%}">Log Out</a>
+</div>
+</body>
+    {%block content%}
+    
+    
+    
+    
+    
+    
+    
+    {%endblock%}
+    
+    <section class="fixed-bottom">
+      <footer class="pt-2 pb-2 bg-dark text-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-8">
+              <h4>Toll Free Number: 0123456789</h4>
+            </div>
+            <div class="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-end">
+              © 2023 Royal Bank. All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+</body>
+</html>

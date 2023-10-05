@@ -1,0 +1,37 @@
+{%extends 'dashbase.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>statement</title>
+</head>
+<body>
+    <div class="main">
+        <form action="get" method="POST">
+            {% csrf_token %}
+            <input type="text" required placeholder="{{client.acc_no}}" name="acc"><br>
+            <p>{{i.acc_no}}</p><br>
+            <p>{{i.balan}}</p>
+            <input type="submit" value="GET"><br>
+        </form>
+    </div>
+
+</body>
+</html>
+
+{%endblock%}
+
+<!--{% if tr %}
+{% for i in tr%}
+{% if client.acc_no in i.acc_no or client.acc_no in i.to_acc%}
+
+{% else %}
+<p>hi helo</p>
+{% endif %}
+{% endfor %}
+{% endif %}-->

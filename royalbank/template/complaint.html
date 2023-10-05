@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+<head>
+    <style>
+        .inn{
+            width: 720px;
+            margin-top:200px;
+            margin-left: 220px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #in{
+            border: 0;
+            width: 700px;
+            height: 150px;
+        }
+    </style>
+</head>
+<div class="com">
+
+    <form action="comp" method="POST">
+        {% csrf_token %}
+    <div class="inn">
+        {{form.as_p}}
+        <!-- <input id="in" type="text" placeholder="enter your complaints" name="comp"><br> -->
+        <input type="submit">
+    </div>
+    {{cmsg}}
+</form>
+</div>
+
+
+
+{% endblock %}

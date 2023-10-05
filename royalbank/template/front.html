@@ -1,0 +1,55 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+    <head>
+        <style>
+            body{
+                background-size:cover;
+                background-image:url('{%static "/images/homeimg.jpg"%}');
+                height:100vh;
+            }
+            .description{
+                margin-left:50px;
+                margin-top:220px;
+                
+            }
+            #n1{
+                width:170px;
+                color:black;
+                border:0;
+                border-radius:5px;
+                background-color:purple;
+            }
+            #fm2{
+                margin-top:10px;
+            }
+            
+            
+        </style>
+    </head>
+    
+<body>
+    <header>
+        <nav class="navbar">
+           
+        </nav>
+    </header>
+    <div id=bg class="homepage">
+        <div class="description">
+            <h3 style="color: aqua;">Discover Online banking</h3> <br>
+            <div class="head1">
+            <h1 style="color: blue;">Banking on your terms</h1></div>
+            <br>
+            <div class="buttons">
+                <form id=fm1 action="log">
+                    <input  type="submit" value="Log In" style="background-color:purple; border:0px; border-radius:3px; width:170px;"></form>
+                <form id=fm2 action="create">
+                    <input id="n1" type="submit" value="Create"></form>
+            </div>
+        </div>
+    </div>
+</body>
+
+{%endblock%}

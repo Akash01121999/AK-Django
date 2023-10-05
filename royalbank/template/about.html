@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+<div class="slide">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{%static '/images/1.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{%static '/images/3.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{%static '/images/2.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+<div class="para">
+    <p>
+The Housing Development Finance Corporation Limited or HDFC Ltd was among the first financial institutions in India to receive an “in principle” approval from the Reserve Bank of India (RBI) to set up a bank in the private sector. This was done as part of RBI’s policy for liberalisation of the Indian banking industry in 1994.
+HDFC Bank was incorporated in August 1994 in the name of HDFC Bank Limited, with its registered office in Mumbai, India. The bank commenced operations as a Scheduled Commercial Bank in January 1995.
+On April 4, 2022 the merger of India’s largest Housing Finance Company, HDFC Limited and the largest private sector bank in India, HDFC Bank was announced. HDFC Ltd, over the last 45 years has developed one of the best product offerings making it a leader in the housing finance business. HDFC Bank enables seamless delivery of home loans as a part of its wide product suite catering to urban, semi urban and rural India.
+As of June 30, 2023, the Bank’s distribution network was at 7,860 branches and 20,352 ATMs / Cash Recycler Machine ( Cash deposit & withdrawal ) across 3,825 cities / towns. HDFC Ltd.’s distribution network comprising 737 outlets, which include 214 offices of HDFC Sales Private Limited stands amalgamated into the Bank’s network. The Bank’s international presence includes branches in 4 countries and 3 representative offices in Dubai, London and Singapore offering Home Loan products to Non-Resident Indians and Persons of Indian Origin.
+</p>
+</div>
+{% endblock %}

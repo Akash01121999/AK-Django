@@ -1,0 +1,28 @@
+{%extends 'dashbase.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset</title>
+</head>
+<body>
+    <div class="main">
+        <form action="reset" method="POST">
+            {% csrf_token %}
+            <div class="reset">
+                <input type="text" required placeholder="enter the old password" name="opass"><br>
+                <input type="password" required placeholder="enter the new password" name="npass"><br>
+                <input type="password" required placeholder="enter the confirm password" name="cnpass"><br>
+                <input type="submit" value="SET"><br>
+                {{msg}}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+{%endblock%}

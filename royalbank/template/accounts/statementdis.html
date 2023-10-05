@@ -1,0 +1,60 @@
+{%extends 'dashbase.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+<body>
+    <div class="main">
+        <div class="head">
+            <h1>{{msg}}{{account}}</h1>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">From account</th>
+                    <th scope="col">To account</th>
+                    <th scope="col">amount transferred</th>
+                    <th scope="col">date and time</th>
+                    <th scope="col">Your balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% if tr %}
+                    {% for i in tr %}
+                  <tr>
+                    <th scope="row">{{i.id}}</th>
+                    <td>{{i.acc_no}}</td>
+                    <td>{{i.to_acc}}</td>
+                    <td>{{i.tr_amount}}</td>
+                    <td>{{i.d_t}}</td>
+                    <td>{{i.balan}}</td>
+                  </tr>
+                  {% endfor %}
+                  {% endif %}
+                </tbody>
+              </table>
+        </div>  
+
+    </div>
+   
+</body>
+{% endblock %}
+
+
+<!--{% if tr %}
+{% for i in tr%}
+{% if client.acc_no in i.acc_no or client.acc_no in i.to_acc%}
+
+{% if nlist %}
+    {% for i in nlist %}
+
+     {% endfor %}
+    {% endif %}
+
+{% else %}
+<p>hi helo</p>
+{% endif %}
+{% endfor %}
+{% endif %}-->

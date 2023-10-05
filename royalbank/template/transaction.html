@@ -1,0 +1,37 @@
+{%extends 'dashbase.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+</head>
+<body>
+    <div class="main">
+        <form action="dep" method="POST">
+            {% csrf_token %}
+        <div class="deposite">
+            <input type="text" required placeholder="enter your account number" name="accno">{{'   '}} {{client.acc_no}}<br>
+            <input type="number" required placeholder="enter thr amount" name="amount"><br>
+            <input type="submit"  value="Deposite"><br>
+            {{depmsg}}
+        </div>
+    </form>
+    <form action="trans" method="POST">
+       {% csrf_token %} 
+       <div class="transfer">
+            <input type="text" required placeholder="enter from account number" name="facc"><br>
+            <input type="number" required placeholder="enter the amount" name="amount"><br>
+            <input type="text" required placeholder="enter the to account number" name="tacc"><br>
+            <input type="submit" value="send"><br>
+            {{depmsg2}}
+       </div>
+    </form>
+    </div>
+</body>
+</html>
+{%endblock%}

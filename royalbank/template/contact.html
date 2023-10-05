@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+
+<div class="main">
+<div>
+    <h1>Royal Bank</h1><br>
+    {% for i in key %}
+    <div>
+        {{i.ad}}
+    </div><br>
+    <div>
+        <p>phone:{{i.ph1}}</p>
+        <p>phone:{{i.ph2}}</p>
+        <p>phone:{{i.ph3}}</p>
+    </div><br>
+    <div>
+        <p>Landline:{{i.lp}}</p>
+    </div><br>
+    <div>
+        <p>email:{{i.em}}</p>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+{% endblock %}

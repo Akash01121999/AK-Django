@@ -1,0 +1,32 @@
+{%extends 'dashbase.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+<head>
+    <style>
+        .main{  
+            height:100vh;
+            width: 1150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="main">
+        <div class="name">
+            <label>NAME</label><br>
+            <p>{{client}} {{client.last_name}}</p>
+        </div>
+        <div id="box" class="actype">
+            <label>AC Type</label><br>
+            <p>{{client.acc_type}}</p>
+            <p>Account no:{{client.acc_no}}</p>
+        </div>
+        <div id="box" class="balance">
+            <label>BALANCE</label><br>
+            <p>Rs.{{client.balan}}</p>
+        </div>
+    </div>
+</body>
+
+{%endblock%}

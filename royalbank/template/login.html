@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block title %}Home{%endblock%}
+
+{%block content%}
+<head>
+    <style>
+        form{
+            justify-content:center;
+            text-align:center;
+        }
+        .formpage{
+            margin-top:200px;
+       }
+    </style>
+</head>    
+<body>
+    <div class="formpage">
+        <form action="loginuser" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            PASSWORD:<input type="password" required name="pasu"><br>
+            <input type="submit" value="Log In">
+        </form>
+        <p>{{note}}</p>
+        {{msg1}}
+        {{msg2}}
+    </div>
+</body>
+{%endblock%}
